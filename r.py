@@ -30,7 +30,6 @@ def extract_valid_iranian_phones(text):
     email_pattern = r'[a-zA-Z0-9_.+-]+@gmail\.[a-zA-Z]{2,}'
     emails = re.findall(email_pattern, text)
 
-
     phone_pattern = r"(?:\+98|0098|0)?(9\d{9})\b"
     raw_phones = re.findall(phone_pattern, text)
 
@@ -186,8 +185,6 @@ def print_url_table(numbered_urls, domain, output_file="ipsocket.txt"):
 
             print(line)
             out_file.write(line + "\n")
-
-
 
 def scan_subdomains(domain, input_file="wordlist.txt", output_file="ipsocket.txt"):
     PORTS = [21, 22, 23, 25, 53, 80, 110, 143, 443, 3306, 8080]
